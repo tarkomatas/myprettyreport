@@ -1,20 +1,10 @@
----
-title: "README"
-  github_document:
-    html_preview: false
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Overview
 
-This package helps to export ggplot2 graphs into a good-looking PDF file in a clear and easy way with a wide range of flexibility. It has a modular structure so the report elements can be combined in many ways. 
+This package helps to export ggplot2 graphs into a good-looking PDF file in a clear and easy way with a wide range of flexibility. It has a modular structure so the report elements can be combined in many ways.
 
 * `start_report()` is the first mandatory function to generate the report.
 * `add_cover_page()` function generates the cover page of the report.
-* `add_new_page()` function adds a new page to the report. 
+* `add_new_page()` function adds a new page to the report.
 * `end_report()` function generates the final output and closes the process.
 
 ## Installation
