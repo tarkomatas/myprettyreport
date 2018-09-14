@@ -1,6 +1,10 @@
+# myprettyreport
+
 ## Overview
 
 This package helps to export ggplot2 graphs into a good-looking PDF file in a clear and easy way with a wide range of flexibility. It has a modular structure so the report elements can be combined in many ways.
+
+Functions of the package:
 
 * `start_report()` is the first mandatory function to generate the report.
 * `add_cover_page()` function generates the cover page of the report.
@@ -25,6 +29,7 @@ sample_plot <- ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
 library(magick)
 sample_logo <- image_read("http://myhappydata.com/img/1.png")
 
+library(myprettyreport)
 start_report() %>%
 
   add_cover_page(
@@ -41,3 +46,8 @@ start_report() %>%
 
   end_report()
 ```
+
+page1             |  page2
+:-------------------------:|:-------------------------:
+![](man/figures/README_example1.png)  |  ![](man/figures/README_example2.png)
+
