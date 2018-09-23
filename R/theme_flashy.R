@@ -11,19 +11,19 @@ define_flashy_header <- function(title, subtitle, header_color,
                   just = "left", y = 0.35, gp = grid::gpar(col = "white"))
 }
 
-define_flashy_footer <- function(page_number, logo, logo_size,
+define_flashy_footer <- function(footer_text, logo, logo_size,
                                  header_color, footer_color) {
   add_colored_block(header_color, vplayout(7, 1))
   add_colored_block(footer_color, vplayout(7, 2:3))
   set_logo(logo, 0.5, logo_size, vplayout(7, 1))
-  grid::grid.text(page_number, vp = vplayout(7, 2:3),
+  grid::grid.text(footer_text, vp = vplayout(7, 2:3),
                   gp = grid::gpar(col = "white"), just = "right", x = 0.95)
 }
 
 set_flashy_report_page_theme <- function(ggplot_object, header_color,
                                          need_header, need_footer,
                                          footer_color, logo,
-                                         logo_size, page_number) {
+                                         logo_size, footer_text) {
   from <- 1
   to <- 7
   set_layout(7, 3,
@@ -35,7 +35,7 @@ set_flashy_report_page_theme <- function(ggplot_object, header_color,
     from <- 2
   }
   if (need_footer == TRUE) {
-    define_flashy_footer(page_number, logo, logo_size,
+    define_flashy_footer(footer_text, logo, logo_size,
                          header_color, footer_color)
     to <- 6
   }

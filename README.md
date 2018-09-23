@@ -24,7 +24,7 @@ devtools::install_github("tarkomatas/myprettyreport")
 library(ggplot2)
 sample_plot <- ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
   geom_point() +
-  stat_smooth(method = 'lm')
+  stat_smooth(method = 'lm', color = "#f44242", fill = "#fd9068")
 
 library(magick)
 sample_logo <- image_read("http://myhappydata.com/img/1.png")

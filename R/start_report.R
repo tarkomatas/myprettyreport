@@ -34,12 +34,12 @@ set_width_height <- function(value) {
 #'     title = "My Custom Title",
 #'     subtitle = "My Custom Subtitle"
 #' ) %>%
-#'   add_new_page() %>%
+#'   add_cover_page() %>%
 #'   end_report()
 #'
 #' # rotated landscape (a4r)
 #' start_report(size = "a4r") %>%
-#'   add_new_page() %>%
+#'   add_cover_page() %>%
 #'   end_report()
 #' @export
 

@@ -9,15 +9,15 @@ define_basic_header <- function(logo, logo_size, title,
   set_logo(logo, 0.13, logo_size, vplayout(1, 1))
 }
 
-define_basic_footer <- function(color, page_number) {
+define_basic_footer <- function(color, footer_text) {
   add_colored_block(color, vplayout(6, 1))
-  grid::grid.text(page_number, vp = vplayout(7, 1))
+  grid::grid.text(footer_text, vp = vplayout(7, 1))
 }
 
 set_basic_report_page_theme <- function(ggplot_object, header_color,
                                         need_header, need_footer,
                                         footer_color, logo,
-                                        logo_size, page_number) {
+                                        logo_size, footer_text) {
   set_layout(7, 1,
              c(1.5, 0.4, 3, 3, 3, 0.3, 1),
              c(1))
@@ -29,7 +29,7 @@ set_basic_report_page_theme <- function(ggplot_object, header_color,
     from <- 3
   }
   if (need_footer == TRUE) {
-    define_basic_footer(footer_color, page_number)
+    define_basic_footer(footer_color, footer_text)
     to <- 5
   }
   print(ggplot_object, vp = vplayout(from:to, 1))

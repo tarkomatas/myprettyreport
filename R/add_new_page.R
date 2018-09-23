@@ -18,7 +18,7 @@
 #' @param logo_size Numeric value which specifies the size of the logo.
 #' Default value is NULL which means that the original size of the logo
 #' file will be used.
-#' @param page_number Character string value which is implemented for
+#' @param footer_text Character string value which is implemented mainly for
 #' displaying the current page number of the report
 #' but it can be used for other purpose.
 #' Default value is "".
@@ -62,7 +62,7 @@
 add_new_page <- function(..., plot = ggplot2::ggplot(), need_header = FALSE,
                             need_footer = FALSE, header_color = "#3d3c3c",
                             footer_color = "#f4f4f4", logo = NA,
-                            logo_size = NULL, page_number = "",
+                            logo_size = NULL, footer_text = "",
                             theme = c("basic", "flashy")) {
   check_if_start_report_function_has_been_called(list(...))
   validate_that_plot_is_a_ggplot_object(plot)
@@ -71,10 +71,10 @@ add_new_page <- function(..., plot = ggplot2::ggplot(), need_header = FALSE,
   if (theme == "basic") {
     set_basic_report_page_theme(plot, header_color, need_header,
                                 need_footer, footer_color, logo,
-                                logo_size, page_number)
+                                logo_size, footer_text)
   } else if (theme == "flashy") {
     set_flashy_report_page_theme(plot, header_color, need_header,
                                  need_footer, footer_color, logo,
-                                 logo_size, page_number)
+                                 logo_size, footer_text)
   }
 }
