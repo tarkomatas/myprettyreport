@@ -6,7 +6,7 @@
 \usage{
 add_new_page(..., plot = ggplot2::ggplot(), need_header = FALSE,
   need_footer = FALSE, header_color = "#3d3c3c", footer_color = "#f4f4f4",
-  logo = NA, logo_size = NULL, page_number = "", theme = c("basic",
+  logo = NA, logo_size = NULL, footer_text = "", theme = c("basic",
   "flashy"))
 }
 \arguments{
@@ -34,7 +34,7 @@ will appear in place of the logo.}
 Default value is NULL which means that the original size of the logo
 file will be used.}
 
-\item{page_number}{Character string value which is implemented for
+\item{footer_text}{Character string value which is implemented mainly for
 displaying the current page number of the report
 but it can be used for other purpose.
 Default value is "".}

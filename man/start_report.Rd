@@ -6,7 +6,7 @@
 \usage{
 start_report(filename = "report_output", title = "Coolest Report Ever",
   subtitle = "Easy & flexible way to create good-looking reports.",
-  size = "a4")
+  size = c("a4", "a4r"))
 }
 \arguments{
 \item{filename}{Character string giving the name of the output PDF file.}
@@ -38,11 +38,11 @@ start_report(
     title = "My Custom Title",
     subtitle = "My Custom Subtitle"
 ) \%>\%
-  add_new_page() \%>\%
+  add_cover_page() \%>\%
   end_report()
 
 # rotated landscape (a4r)
 start_report(size = "a4r") \%>\%
-  add_new_page() \%>\%
+  add_cover_page() \%>\%
   end_report()
 }
