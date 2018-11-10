@@ -75,7 +75,7 @@ set_page_number <- function(page_number, plot) {
 #'   ) %>%
 #'   end_report()
 #'
-#' # ignore automatic page number feature
+#' # ignore automatic page number function
 #' start_report() %>%
 #'   add_multiple_page(
 #'     plot = plot_list,
