@@ -1,7 +1,7 @@
 Package: myprettyreport
 Type: Package
 Title: Custom PDF report layouts to export ggplot2 visualizations
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Tamás", "Markó", email = "tamas.marko@myhappydata.com",
   role = c("aut", "cre"))
 Depends: R (>= 3.5.0)
@@ -10,8 +10,9 @@ Imports: Cairo (>= 1.5-9),
          magrittr (>= 1.5),
          ggplot2 (>= 3.0.0)
 Suggests: magick (>= 1.9),
-    knitr,
-    rmarkdown
+          patchwork,
+          knitr,
+          rmarkdown
 Description: This package helps to export ggplot2 graphs into a good-looking PDF file in a clear and easy way with a wide range of flexibility. It has a modular structure so the report elements can be combined in many ways. See the project website for more information.
 License: GPL-2
 Encoding: UTF-8
