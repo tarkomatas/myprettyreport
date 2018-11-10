@@ -52,6 +52,8 @@ page1             |  page2
 :-------------------------:|:-------------------------:
 ![](man/figures/README_example1.png)  |  ![](man/figures/README_example2.png)
 
+## Additional links
+
 [detailed introduction of the package ](https://blog.myhappydata.com/2018/11/10/detailed-introduction-of-myprettyreport-r-package/)
 
 
