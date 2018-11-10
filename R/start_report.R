@@ -46,8 +46,7 @@ set_width_height <- function(value) {
 start_report <- function(filename = "report_output",
                          title = "Coolest Report Ever",
                          subtitle = "Easy & flexible way to create good-looking reports.",
-                         size = c("a4","a4r")) {
-  #check_for_active_graphical_devices() # not working perfectly, check: 'multiple plot on one page'
+                         size = c("a4", "a4r")) {
   size <- match.arg(size)
   Cairo::Cairo(type = "pdf", file = filename,
                width = set_width_height(size)[1],
@@ -56,4 +55,5 @@ start_report <- function(filename = "report_output",
   assign("filename", filename, envir = myprettyreport.env)
   assign("report_title", title, envir = myprettyreport.env)
   assign("report_subtitle", subtitle, envir = myprettyreport.env)
+  assign("add_cover_page_executed", FALSE, envir = myprettyreport.env)
 }

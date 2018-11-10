@@ -2,6 +2,7 @@
 
 export("%>%")
 export(add_cover_page)
+export(add_multiple_page)
 export(add_new_page)
 export(end_report)
 export(start_report)

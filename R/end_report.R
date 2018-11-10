@@ -1,8 +1,5 @@
-get_path_of_output <- function() {
-  path <- paste0(getwd(), "/", myprettyreport.env$filename, ".pdf")
-  path <- paste0("Report making process finished.\nPath of the output file: ",
-                 path)
-  message(path)
+print_end_message <- function() {
+  message("Report making process finished.")
 }
 
 #' End report
@@ -23,7 +20,8 @@ get_path_of_output <- function() {
 end_report <- function(...) {
   check_if_start_report_function_has_been_called(list(...))
   grDevices::dev.off()
-  get_path_of_output()
-  rm(list = c("report_title", "report_subtitle", "filename"),
+  print_end_message()
+  rm(list = c("report_title", "report_subtitle", "filename",
+              "add_cover_page_executed"),
      envir = myprettyreport.env)
 }
