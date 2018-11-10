@@ -42,8 +42,8 @@ set_flashy_cover_theme <- function(header_color, footer_color,
                                    creaton_time, logo, logo_size,
                                    title, subtitle)  {
   set_layout(11, 5,
-             c(0.2, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 0.2),
-             c(0.2, 1, 1, 1, 0.2))
+             c(0.025, rep(0.1125, 8), 0.05, 0.025),
+             c(0.05, rep(0.3, 3), 0.05))
   add_colored_block(header_color, vplayout(2:8, 2))
   add_colored_block(header_color, vplayout(2:6, 3))
   add_colored_block(header_color, vplayout(2:5, 4))

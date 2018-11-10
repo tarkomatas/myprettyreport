@@ -35,7 +35,7 @@ set_basic_cover_theme <- function(header_color, footer_color,
                                   creaton_time, logo, logo_size, title,
                                   subtitle)  {
   set_layout(3, 1,
-             c(1.5, 8, 0.5),
+             c(0.15, 0.8, 0.05),
              c(1))
   add_colored_block(header_color, vplayout(1, 1))
   add_colored_block(footer_color, vplayout(3, 1))
