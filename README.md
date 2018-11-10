@@ -8,7 +8,8 @@ Functions of the package:
 
 * `start_report()` is the first mandatory function to generate the report.
 * `add_cover_page()` function generates the cover page of the report.
-* `add_new_page()` function adds a new page to the report.
+* `add_new_page()` function adds a single page to the report.
+* `add_multiple_page()` function adds multiple pages to the report.
 * `end_report()` function generates the final output and closes the process.
 
 ## Installation
@@ -34,7 +35,7 @@ start_report() %>%
 
   add_cover_page(
     logo = sample_logo,
-    logo_size = NULL
+    logo_size = 0.3
   ) %>%
 
   add_new_page(
