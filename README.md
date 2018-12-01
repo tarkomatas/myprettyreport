@@ -28,7 +28,7 @@ sample_plot <- ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
   stat_smooth(method = 'lm', color = "#f44242", fill = "#fd9068")
 
 library(magick)
-sample_logo <- image_read("http://myhappydata.com/img/1.png")
+sample_logo <- image_read("https://raw.githubusercontent.com/tarkomatas/website/master/img/1.png")
 
 library(myprettyreport)
 start_report() %>%
