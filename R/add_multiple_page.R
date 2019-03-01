@@ -89,7 +89,7 @@ set_page_number <- function(page_number, plot) {
 add_multiple_page <- function(..., plot,
                               page_number = c("default")) {
   page_number <- set_page_number(page_number, plot)
-  pb <- utils::txtProgressBar(min = 1, max = length(plot), style = 3)
+  pb <- utils::txtProgressBar(min = 0, max = length(plot), style = 3)
   for (i in 1:length(plot)) {
     add_new_page(..., plot = plot[[i]], footer_text = page_number[i])
     utils::setTxtProgressBar(pb, i)
